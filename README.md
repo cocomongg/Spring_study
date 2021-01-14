@@ -8,3 +8,6 @@
 
 ## practice1 - third 
 - https://velog.io/@pjm4142/Spring-%EC%9E%85%EB%AC%B8-step3.-%ED%9A%8C%EC%9B%90-%EA%B4%80%EB%A6%AC-%EC%98%88%EC%A0%9C
+
+## practice1 - fourth
+- https://velog.io/@pjm4142/Spring-%EC%9E%85%EB%AC%B8-step4.-%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B9%88%EA%B3%BC-%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84

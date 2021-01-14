@@ -4,14 +4,18 @@ package hello.practice1.service;
 import hello.practice1.domain.Member;
 import hello.practice1.repository.MemberRepository;
 import hello.practice1.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+//@Service
 public class MemberService {
 //    private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final MemberRepository memberRepository;
 
+//    @Autowired
     public MemberService(MemberRepository memberRepository){ // DI, add for test
         this.memberRepository = memberRepository;
     }
