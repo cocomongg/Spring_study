@@ -29,7 +29,6 @@ public class MemberController {
     public String create(MemberForm form){ //회원 등록
         Member member = new Member();
         member.setName(form.getName());
-
         memberService.join(member);
 
         return "redirect:/";
