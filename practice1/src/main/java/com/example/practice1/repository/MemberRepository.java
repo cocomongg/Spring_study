@@ -1,6 +1,8 @@
-package hello.practice1.repository;
+package com.example.practice1.repository;
 
-import hello.practice1.domain.Member;
+
+
+import com.example.practice1.domain.Member;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,6 +1,7 @@
-package hello.practice1.repository;
+package com.example.practice1.repository;
 
-import hello.practice1.domain.Member;
+
+import com.example.practice1.domain.Member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;

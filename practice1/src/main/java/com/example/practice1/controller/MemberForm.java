@@ -1,4 +1,4 @@
-package hello.practice1.controller;
+package com.example.practice1.controller;
 
 public class MemberForm {
     private String name;

@@ -1,7 +1,8 @@
-package hello.practice1.controller;
+package com.example.practice1.controller;
 
-import hello.practice1.domain.Member;
-import hello.practice1.service.MemberService;
+
+import com.example.practice1.domain.Member;
+import com.example.practice1.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

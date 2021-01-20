@@ -1,14 +1,15 @@
-package hello.practice1.service;
+package com.example.practice1.service;
 
-import hello.practice1.domain.Member;
-import hello.practice1.repository.MemberRepository;
-import hello.practice1.repository.MemoryMemberRepository;
+
+import com.example.practice1.domain.Member;
+import com.example.practice1.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MemberServiceTest {
 //    MemberService memberService = new MemberService();
