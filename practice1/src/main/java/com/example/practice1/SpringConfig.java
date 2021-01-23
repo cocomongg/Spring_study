@@ -1,6 +1,7 @@
 package com.example.practice1;
 
 
+import com.example.practice1.aop.TimeTraceAop;
 import com.example.practice1.repository.*;
 import com.example.practice1.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
