@@ -17,19 +17,19 @@ public class SpringConfig {
 
     @Bean
     public MemberService memberService(){
-        System.out.println("SpringConfig.memberService");
+//        System.out.println("SpringConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public MemberRepository memberRepository() {
-        System.out.println("SpringConfig.memberRepository");
+//        System.out.println("SpringConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService(){
-        System.out.println("SpringConfig.orderService");
+//        System.out.println("SpringConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
