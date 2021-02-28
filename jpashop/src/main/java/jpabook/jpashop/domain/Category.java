@@ -27,7 +27,7 @@ public class Category {
 
     /*
     * Category같은 계층 구조는 어떻게 구현하나?
-    * 같은 entity에서 연관관계 생
+    * 같은 entity에서 연관관계 생성
     * */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
@@ -35,4 +35,10 @@ public class Category {
 
     @OneToMany(mappedBy =  "parent")
     private List<Category> child = new ArrayList<>();
+
+    //==연관관계 매서드==//
+    public void addChildCategory(Category child) {
+        this.child.add(child);
+        child.setParent(this);
+    }
 }

@@ -9,8 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional(readOnly = true) //jpa가 조회하는 곳에서 성능 최적화
-@RequiredArgsConstructor //생성자 만들어줌(final키워드만, lombok)
+@Transactional(readOnly = true) //데이터의 변경이 없는 읽기 전용 메서드에 사용,
+                                // 영속성 컨텍스트를 플러시 하지 않으므로 약간의 성능 향상(읽기 전용에는 다 적용)
+@RequiredArgsConstructor //생성자 만들어줌(final키워드만), lombok
 public class MemberService {
 
     private final MemberRepository memberRepository;
@@ -18,7 +19,6 @@ public class MemberService {
     //회원 가입
     @Transactional
     public Long join(Member member){
-
         validateDuplicateMember(member);
         memberRepository.save(member);
         return member.getId();
