@@ -1,4 +1,4 @@
-package com.example.restful;
+package com.example.restful.helloworld;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
