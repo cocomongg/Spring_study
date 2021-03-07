@@ -14,9 +14,9 @@ public class UserDaoService {
     private static int usersCount = 3;
 
     static{
-        users.add(new User(1, "jm", new Date()));
-        users.add(new User(2, "jm1", new Date()));
-        users.add(new User(3, "jm2", new Date()));
+        users.add(new User(1, "jm", new Date(), "pass1", "970927-1063017"));
+        users.add(new User(2, "jm1", new Date(),  "pass2", "870927-1063017"));
+        users.add(new User(3, "jm2", new Date(),  "pass3", "770927-1063017"));
     }
 
     public User save(User user){
@@ -51,7 +51,16 @@ public class UserDaoService {
                 return user;
             }
         }
+        return null;
+    }
 
+    public User updateById(int id, String name){
+        for(User user : users){
+            if(user.getId() == id){
+                user.setName(name);
+                return user;
+            }
+        }
         return null;
     }
 }
