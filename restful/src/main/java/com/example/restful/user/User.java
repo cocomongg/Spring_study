@@ -9,9 +9,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -19,7 +24,10 @@ import java.util.Date;
 //@JsonFilter("UserInfo") //프로그래밍으로 제어하는 filtering방법 -> AdminUserController
 @NoArgsConstructor
 @ApiModel(description = "사용자 상세 정보를 위한 도메인 객체")
+@Entity
 public class User {
+
+    @Id @GeneratedValue
     private Integer id;
 
     @Size(min=2, message = "Name은 2글자 이상 입력해주세요.")
@@ -31,4 +39,15 @@ public class User {
     //@JsonIgnore //client에게 응답할때 보여지지 않는 필드(무시함)
     private String password;
     private String ssn;
+
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts;
+
+    public User(Integer id, @Size(min = 2, message = "Name은 2글자 이상 입력해주세요.") String name, @Past Date joinDate, String password, String ssn) {
+        this.id = id;
+        this.name = name;
+        this.joinDate = joinDate;
+        this.password = password;
+        this.ssn = ssn;
+    }
 }

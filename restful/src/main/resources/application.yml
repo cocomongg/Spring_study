@@ -12,7 +12,13 @@ spring:
     user:
       name: username
       password: passw0rd
-
+  datasource:
+    url: jdbc:h2:mem:testdb
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
 management:
   endpoints:
     web:
