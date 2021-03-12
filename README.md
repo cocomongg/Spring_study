@@ -4,4 +4,4 @@
 
 ## 3. jpashop - 스프링부트와 JPA활용1
 
-## 4. restful - RESTful Web Services 
+## 4. restful - [RESTful Web Services](https://github.com/cocomongg/Spring_study/blob/main/text/RESTful%20Web%20Services.md)
